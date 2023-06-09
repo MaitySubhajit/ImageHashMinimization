@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         td, th {
+         border: 0px solid black;
+         }
+         img{
+         padding: 5px;
+         }
+      </style>
+      <title>Image Hash Minimization for Tamper Detection</title>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <!--  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+         <script>
+           window.dataLayer = window.dataLayer || [];
+         
+           function gtag() {
+             dataLayer.push(arguments);
+           }
+         
+           gtag('js', new Date());
+         
+           gtag('config', 'G-PYVRSFMDRL');
+         
+         
+         
+         </script> -->
+      <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+         rel="stylesheet">
+      <link rel="stylesheet" href="./static/css/bulma.min.css">
+      <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+      <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+      <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+      <link rel="stylesheet"
+         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+      <link rel="stylesheet" href="./static/css/index.css">
+      <link rel="icon" href="./static/images/site_icon64.png">
+      <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
+      <link rel="stylesheet" href="css/app.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script defer src="./static/js/fontawesome.all.min.js"></script>
+      <script src="./static/js/bulma-carousel.min.js"></script>
+      <script src="./static/js/bulma-slider.min.js"></script>
+      <script src="./static/js/index.js"></script>
+   </head>
+   <body>
+   <!-- <body>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="https://keunhong.com">
+            <span class="icon">
+                <i class="fas fa-home"></i>
+            </span>
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More Research
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="https://hypernerf.github.io">
+                  HyperNeRF
+                </a>
+                <a class="navbar-item" href="https://nerfies.github.io">
+                  Nerfies
+                </a>
+                <a class="navbar-item" href="https://latentfusion.github.io">
+                  LatentFusion
+                </a>
+                <a class="navbar-item" href="https://photoshape.github.io">
+                  PhotoShape
+                </a>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </nav> -->
+   <section class="hero">
+      <div class="hero-body">
+         <div class="container is-max-desktop">
+            <div class="columns is-centered">
+               <div class="column has-text-centered">
+                  <h1 class="title is-1 publication-title", style="color:rgb(0, 255, 0);">Image Hash Minimization</h1>
+                  <h1 class="title is-4 publication-title">for Tamper Detection</h1>
+                  
+                  <!-- Place Banner here if any -->
+
+                  <div class="is-size-5 publication-authors">
+                     <span class="author-block">
+                     <a href="https://maitysubhajit.github.io/">Subhajit Maity</a><sup>1</sup>,</span>
+                     <span class="author-block">
+                     <a href="http://ec.nits.ac.in/ram/">Ram Kumar Karsh</a><sup>2</sup>,</span>
+                  </div>
+                  <div class="is-size-5 publication-authors">
+                     <span class="author-block"><sup>1</sup>Department of ECE, Jalpaiguri Govt. Engg. College, Jalpaiguri, India</span>
+                     <span class="author-block"><sup>2</sup>Department of ECE, National Institute of Technology, Silchar, India</span>
+                  </div>
+                  <!--     <div class="column has-text-centered">
+                     <a href="as">ICLR 2023</a>
+                     </span>
+                     </div> -->
+                  <div class="column has-text-centered">
+                     <div class="publication-links">
+                        <!-- PDF Link. -->
+                        <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2305.17748"
+                           class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper (PDF)</span>
+                        </a>
+                        </span>
+                        <span class="link-block">
+                        <a href="https://arxiv.org/abs/2305.17748"
+                           class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                        </a>
+                        </span>
+                        <!-- Video Link. -->
+                        <!-- <span class="link-block">
+                        <a href="https://www.youtube.com/watch?v=k7xFbELpnv4"
+                           class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                        </span>
+                        <span>Video (YouTube)</span>
+                        </a>
+                        </span> -->
+                        <!-- Code Link. -->
+                        <span class="link-block">
+                        <a href="https://github.com/MaitySubhajit/ImageHashMinimization"
+                           class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                        <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                        </a>
+                        </span>
+                        <!-- Dataset Link. -->
+                        <span class="link-block">
+                           <a href="./static/ImageHashMinimization_ICAPR2017_slides.pdf"
+                              class="external-link button is-normal is-rounded is-dark">
+                             <span class="icon">
+                                 <i class="far fa-images"></i>
+                             </span>
+                             <span>Slides</span>
+                           </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="hero teaser">
+      <div class="container is-max-desktop">
+         <div class="hero-body">
+            <center><img class="round" style="width:300px" src="./static/images/IH_teaser.png"/></center>
+            <h2 class="subtitle has-text-centered">
+               <span class="dnerf"></span> A basic idea of what the paper is about. The goal is to detect if an image has been tampered or not using efficient hashing method. Here is a depiction of successful detection of tampered image.
+            </h2>
+         </div>
+      </div>
+   </section>
+   <!-- <table border="1" id="cssTable">
+      <tr>
+          <td>Text</td>
+          <td>Text</td>
+      </tr>
+      </table> -->
+   <!-- 
+      <section class="hero is-light is-small">
+        <div class="hero-body">
+          <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-steve">
+                <video poster="" id="steve" autoplay controls muted loop height="100%">
+                  <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/steve.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-chair-tp">
+                <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+                  <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/chair-tp.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-shiba">
+                <video poster="" id="shiba" autoplay controls muted loop height="100%">
+                  <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/shiba.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-fullbody">
+                <video poster="" id="fullbody" autoplay controls muted loop height="100%">
+                  <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/fullbody.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-blueshirt">
+                <video poster="" id="blueshirt" autoplay controls muted loop height="100%">
+                  <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/blueshirt.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-mask">
+                <video poster="" id="mask" autoplay controls muted loop height="100%">
+                  <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/mask.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-coffee">
+                <video poster="" id="coffee" autoplay controls muted loop height="100%">
+                  <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/coffee.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-toby">
+                <video poster="" id="toby" autoplay controls muted loop height="100%">
+                  <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/toby2.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       -->
+   <section class="section">
+   <div class="container is-max-desktop">
+   <!-- Abstract. -->
+   <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+         <h2 class="title is-3">Abstract</h2>
+         <div class="content has-text-justified">
+            Tamper detection using image hash is a very common problem of modern days. Several research and advancements have already been done to address this problem. However, most of the existing methods lack the accuracy of tamper detection when the tampered area is low, as well as requiring long image hashes. In this paper, we propose a novel method objectively to minimize the hash length while enhancing the performance at low tampered area.
+            </p>
+         </div>
+      </div>
+   </div>
+   
+    <!-- <section class="hero teaser">
+      <div class="container is-max-desktop">
+         <div class="hero-body">
+		<iframe width="720" height="480"
+			src="https://www.youtube.com/embed/k7xFbELpnv4?">
+		</iframe>
+            <h2 class="subtitle has-text-centered">
+               <span class="dnerf"></span>
+            </h2>
+         </div>
+      </div>
+   </section> -->
+   
+   <!--/ Abstract. -->
+   <!-- Paper video. -->
+   <section class="section">
+      <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+         <div class="column is-four-fifths">
+            <h2 class="title is-3">Methodology</h2>
+            <div class="content has-text-justified">
+               </h2>
+               <center>
+                  <img src="./static/images/IH_method.png" alt="Methodology" border=0 height=300 width=650></img>
+               </center>
+               <br>
+               <h5 class="subtitle has-text-centered">
+                  The methodology described in the paper uses k-means clustering on SURF features from the image to generate a robust hash. The same hash is used to determine if the image has been tampered or not.
+               </h5>
+               &nbsp; 
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- <section class="section">
+      <div class="container is-max-desktop"> -->
+      <!-- Abstract. -->
+      <!-- <div class="columns is-centered has-text-centered">
+         <div class="column is-four-fifths">
+            <h2 class="title is-3">Architecture</h2>
+            <div class="content has-text-justified">
+               </h2>
+               <center>
+                  <img src="./static/images/SelfDocSeg_icdar23_architecture_v4.png" alt="architecture" border=0 height=1000 width=1500></img>
+               </center>
+               <h5 class="subtitle has-text-centered">
+                SelfDocSeg intends to pre-train a CNN image encoder catering specifically catering to document image instance segmentation task. The architecture of SelfDocSeg two encoders, one updated using backpropagation and the other using EMA, and is trained using a focal loss for document object localization and a cosine similarity loss for document object representation learning.
+               </h5>
+               <br>
+               <center>
+                <img src="static/images/SelfDocSeg_icdar23_masking_v2.png" alt="mask-generation" border=0 height=300 width=1500/>
+               </center>
+               <h5 class="subtitle has-text-centered">
+                Process for mask generation from document objects using image processing.
+               </h5>
+               <br>
+                &nbsp; 
+            </div>
+         </div>
+      </div>
+   </section> -->
+   <section class="hero">
+   <div class="hero-body">
+   <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+         <div class="column is-four-fifths">
+            <h2 class="title is-3">Results</h2>
+            <div class="content has-text-justified">
+                <center>
+                 <img src="static/images/IH_Qualitative.png" alt="Qualitative Sample" border=0 height=300 width=1500/>
+                </center>
+                <h5 class="subtitle has-text-centered">
+                 A sample of detected SURF features in original (left) and tamprerd (right) images.
+                </h5>
+                <br>
+                <center>
+                 <img src="static/images/IH_DistChartLarge.png" alt="Distance Plot of Large Tampered" border=0 height=300 width=1500/>
+                </center>
+                <h5 class="subtitle has-text-centered">
+                 Plot of L<sub>2</sub> distances between k-means centroids of tampered images with tampered area more than 30% and its corresponding original iamge.
+                </h5>
+                <br>
+                <center>
+                 <img src="static/images/IH_DistChartSmall.png" alt="Distance Plot of Small Tampered" border=0 height=300 width=1500/>
+                </center>
+                <h5 class="subtitle has-text-centered">
+                 Plot of L<sub>2</sub> distances between k-means centroids of tampered images with tampered area less than 5% and its corresponding original iamge.
+                </h5>
+                <br>
+                <center>
+                 <img src="static/images/IH_KPlot.png" alt="K vs. Distance Plot" border=0 height=300 width=1500/>
+                </center>
+                <h5 class="subtitle has-text-centered">
+                 Variation in mean L<sub>2</sub> distances with respect to the number of clusters, <em>k</em> for k-means clustering.
+                </h5>
+                <br>
+                <center>
+                 <img src="static/images/IH_ThresholdPlot.png" alt="Plot for Threshold Determination" border=0 height=300 width=1500/>
+                </center>
+                <h5 class="subtitle has-text-centered">
+                 Determining the Threshold for L<sub>2</sub> distance for Hash Mactching: The threshold is determined as an optimal point so that the strategy can distinguish tampered images robustly without getting affected by the image content preserving operations.
+                </h5>
+                <br>
+            </div>
+         </div>
+      </div>
+   </div>
+   <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+         <h2 class="title">BibTeX</h2>
+         <pre><code>@inproceedings{maity2017image,
+title={Image Hash Minimization for Tamper Detection},
+author={Maity, Subhajit and Karsh, Ram Kumar},
+booktitle={Ninth International Conference on Advances in Pattern Recognition (ICAPR)},
+year={2017}}</code></pre>
+      </div>
+   </section>
+   <script>
+      const viewers = document.querySelectorAll(".image-compare");
+      viewers.forEach((element) => {
+          let view = new ImageCompare(element, {
+              hoverStart: true,
+              addCircle: true
+          }).mount();
+      });
+      
+      $(document).ready(function () {
+          var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
+              lineNumbers: false,
+              lineWrapping: true,
+              readOnly: true
+          });
+          $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+          })
+      });
+   </script>
+   <br>
+   <p style="text-align:center"> Copyright: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC BY-NC-SA 4.0</a> © Subhajit Maity | Last updated: 9 Jun 2023 |Template Credit: <a href="https://nerfies.github.io/"> Nerfies</a></p>
+   </body>
+</html>
