@@ -22,15 +22,18 @@
 This is the official implementation for the paper [Image Hash Minimization for Tamper Detection](https://ieeexplore.ieee.org/document/8593100) [(ICAPR 2017)](https://www.isical.ac.in/~icapr17/) by [S. Maity](https://maitysubhajit.github.io) and [R. K. Karsh](http://ec.nits.ac.in/ram/).
 
 :pushpin: [Requirements](#rocket-requirements)
+
 :pushpin: [Guidelines to Use](#pencil-guidelines-to-use)
+
 :pushpin: [FAQ](#microscope-faq)
+
 :pushpin: [Citation](#bibtex)
 
 ### Methodological Flow
-<div align="center"><center><img src="./docs/static/images/IH_method.jpg" width="70%"></center></div>
+<div align="center"><center><img src="./docs/static/images/IH_method.jpg" width="75%"></center></div>
 
 ### Sample Qualitative Depiction
-<div align="center"><center><img src="./docs/static/images/IH_Qualitative.png" width="70%"></center></div>
+<div align="center"><center><img src="./docs/static/images/IH_Qualitative.png" width="75%"></center></div>
 
 ### Quantitative Performance Measures
 |                                        |      Pun _et al._      |      Ours      |
