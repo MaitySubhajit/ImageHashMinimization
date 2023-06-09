@@ -47,7 +47,9 @@ This is the official implementation for the paper [Image Hash Minimization for T
 
 ## :pencil: Guidelines to Use
 
-[Dataset](#Dataset) :black_circle: [Running the Scripts](#Running-the-Scripts)
+:white_check_mark: [Dataset](#Dataset)
+
+:white_check_mark: [Running the Scripts](#Running-the-Scripts)
 
 ### Dataset   
 - To test the accuracy of our model, we have used CASIA 2.0 dataset which is no longer available from its official source. However, the official dataset as well as a correctly annotated version can be downloaded from [here](https://github.com/namtpham/casia2groundtruth).
