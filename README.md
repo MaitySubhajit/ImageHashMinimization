@@ -21,11 +21,16 @@
 # :fire: [ICAPR 2017] Image Hash Minimization for Tamper Detection 
 This is the official implementation for the paper [Image Hash Minimization for Tamper Detection](https://ieeexplore.ieee.org/document/8593100) [(ICAPR 2017)](https://www.isical.ac.in/~icapr17/) by [S. Maity](https://maitysubhajit.github.io) and [R. K. Karsh](http://ec.nits.ac.in/ram/).
 
+:pushpin: [Requirements](#rocket-requirements)
+:pushpin: [Guidelines to Use](#pencil-guidelines-to-use)
+:pushpin: [FAQ](#microscope-faq)
+:pushpin: [Citation](#bibtex)
+
 ### Methodological Flow
-<center><img src="./docs/static/images/IH_method.jpg" width="40%"></center>
+<div align="center"><center><img src="./docs/static/images/IH_method.jpg" width="70%"></center></div>
 
 ### Sample Qualitative Depiction
-<center><img src="./docs/static/images/IH_Qualitative.png" width="40%"></center>
+<div align="center"><center><img src="./docs/static/images/IH_Qualitative.png" width="70%"></center></div>
 
 ### Quantitative Performance Measures
 |                                        |      Pun _et al._      |      Ours      |
@@ -86,7 +91,7 @@ K = 1;                                                                          
 - With different seeds either from k means ++ or random may result in minor deviation from the reported accurcy.
 - We recommend using the k means ++ as it generates more stable seeds than the random strategy.
 
-## Citation  
+## BibTeX  
 If you use our code for your research, please cite our paper. Many thanks!
 
 ```
