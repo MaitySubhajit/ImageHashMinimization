@@ -80,7 +80,7 @@ count = 30;                                               % number of samples <n
 K = 1;                                                    % setting the number of clusters to be formed
 thres = 1000;                                             % setting the threshold for SURF feature strength
 dataset_path = 'path/to/dataset/root/CASIAv2/';           % setting the dataset path
-maxiter_k = 1000000;                                      % setting up the maximum iterations to use for clustering
+maxiter_k = 1000000;                                      % setting up the maximum iterations for clustering
 ``` 
 3. Run `data_from_original.m` script and make sure that the centroids are saved as `centers_original.mat` in the `codes` directory. The script will provide visualization of the SURF features extracted from each of the original images.
 4. Run `data_from_tampered.m` script and make sure that the centroids are saved as `centers_tampered.mat` in the `codes` directory. The script will provide visualization of the SURF features extracted from each of the tampered images.
