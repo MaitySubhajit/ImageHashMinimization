@@ -76,18 +76,18 @@ This is the official implementation for the paper [Image Hash Minimization for T
 1. Open the `codes` directory in MATLAB.
 2. Set the path and hyper-parameters in `data_from_original.m` and `data_from_tampered.m`. To imitate our process, ensure `K=1` as we used sinlhle cluster to determine the deviation of the centroid. The hyper-parameter, threshold `thres` for the strength of the SURF features detected in the images needs to be tuned according to the dataset. The proper CASIAv2.0 root pathe should be provided in the `dataset_path` and the `count` should be set as the total number of original and tampered image pairs.
 ```
-count = 30;                                                         % number of samples <n> in dataset
-K = 1;                                                              % setting the number of clusters to be formed
-thres = 1000;                                                       % setting the threshold for SURF feature strength
-dataset_path = 'path/to/dataset/root/CASIAv2/';                     % setting the dataset path
-maxiter_k = 1000000;                                                % setting up the maximum iterations to use for clustering
+count = 30;                                               % number of samples <n> in dataset
+K = 1;                                                    % setting the number of clusters to be formed
+thres = 1000;                                             % setting the threshold for SURF feature strength
+dataset_path = 'path/to/dataset/root/CASIAv2/';           % setting the dataset path
+maxiter_k = 1000000;                                      % setting up the maximum iterations to use for clustering
 ``` 
 3. Run `data_from_original.m` script and make sure that the centroids are saved as `centers_original.mat` in the `codes` directory. The script will provide visualization of the SURF features extracted from each of the original images.
 4. Run `data_from_tampered.m` script and make sure that the centroids are saved as `centers_tampered.mat` in the `codes` directory. The script will provide visualization of the SURF features extracted from each of the tampered images.
 5. Set relevant parameters in `tampered.m`. The `count` should be set as the total number of original and tampered image pairs and `K=1` for imitating the method described in the paper, same as `data_from_original.m` and `data_from_tampered.m`.
 ```
-count = 30;                                                         % number of samples <n> in dataset
-K = 1;                                                              % setting the number of clusters to be formed
+count = 30;                                               % number of samples <n> in dataset
+K = 1;                                                    % setting the number of clusters to be formed
 ```
 6. Run `tampered.m` script. The script will print out tampered or not-tampered status for each sample in the dataset and save the Euclidean distance matrix in a file named `distance.mat` where `NaN` represents the images which are not tampered.
 
