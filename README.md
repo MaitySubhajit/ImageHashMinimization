@@ -30,7 +30,9 @@
    </style> -->
 	<!-- <br> -->
 	<center><img src="./docs/static/images/banner.jpg" width=60% alt="Banner"></center>
-   <center><a href="https://www.isical.ac.in/~icapr17/"><img src="https://www.isical.ac.in/~icapr17/slide_show/images/pcm-logo.png" width=10% alt="icapr logo"><img src="./docs/static/images/icapr.png" width=25% alt="icapr banner"></a></center>
+   <br>
+   <!-- <img src="https://www.isical.ac.in/~icapr17/slide_show/images/pcm-logo.png" width=10% alt="icapr logo"> -->
+   <center><a href="https://www.isical.ac.in/~icapr17/"><img src="./docs/static/images/icapr.png" width=20% alt="icapr banner"></a></center>
 	<br>
    <center>
       <!-- <p class="container"><b><a href="https://www.isical.ac.in/~icapr17/" style="text-decoration:none; color: #66ff00;" >ICAPR 2017</a></b></p>&nbsp; -->
