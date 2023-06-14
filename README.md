@@ -31,7 +31,7 @@
 	<!-- <br> -->
 	<center><img src="./docs/static/images/banner.jpg" width=60% alt="Banner"></center>
    <!-- <center> </center> -->
-	<!-- <br> -->
+	<br>
    <center>
       <!-- <p class="container"><b><a href="https://www.isical.ac.in/~icapr17/" style="text-decoration:none; color: #66ff00;" >ICAPR 2017</a></b></p>&nbsp; -->
       <!-- <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=plastic" width=7.5% alt="Build shield"> -->
