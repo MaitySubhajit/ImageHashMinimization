@@ -1,5 +1,5 @@
 <div align="center">
-   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+   <!-- <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
    <style>
       /* @font-face {
       font-family: 'Raleway';
@@ -27,13 +27,13 @@
       font-variation-settings: "wght" 582; 
       letter-spacing: 1px;
       }
-   </style>
+   </style> -->
 	<!-- <br> -->
 	<center><img src="./docs/static/images/banner.jpg" width=60% alt="Banner"></center>
    <!-- <center> </center> -->
 	<!-- <br> -->
    <center>
-      <p class="container"><b><a href="https://www.isical.ac.in/~icapr17/" style="text-decoration:none; color: #66ff00;" >ICAPR 2017</a></b></p>&nbsp;
+      <!-- <p class="container"><b><a href="https://www.isical.ac.in/~icapr17/" style="text-decoration:none; color: #66ff00;" >ICAPR 2017</a></b></p>&nbsp; -->
       <!-- <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=plastic" width=7.5% alt="Build shield"> -->
       <a href="https://doi.org/10.1109/ICAPR.2017.8593100"><img src="https://img.shields.io/badge/-DOI-00629B?style=plastic&logo=ieee" alt="ieee shield"></a>
       <a href="https://arxiv.org/abs/2305.17748"><img src="https://img.shields.io/badge/-Paper-B31B1B?style=plastic&logo=arXiv" alt="arxiv shield"></a>
