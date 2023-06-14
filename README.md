@@ -1,8 +1,39 @@
 <div align="center">
-	<br>
-	<center><img src="./docs/static/images/banner.png" width=60% alt="Banner"></center>
-	<br>
+   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+   <style>
+      /* @font-face {
+      font-family: 'Raleway';
+      src: url('https://fonts.googleapis.com/css?family=Raleway');
+      } */
+      .container {
+      width: 100%;
+      height: 7vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+      text-transform: uppercase;
+      font-family: 'Raleway';
+      letter-spacing: -3px;
+      transition: 100ms ease;
+      font-variation-settings: "wght" 311;
+      margin-bottom: 0.8rem;
+      color: #66ff00;
+      outline: none;
+      text-align: center;
+      }
+      .container:hover {
+      font-variation-settings: "wght" 582; 
+      letter-spacing: 1px;
+      }
+   </style>
+	<!-- <br> -->
+	<center><img src="./docs/static/images/banner.jpg" width=60% alt="Banner"></center>
+   <!-- <center> </center> -->
+	<!-- <br> -->
    <center>
+      <p class="container"><b><a href="https://www.isical.ac.in/~icapr17/" style="text-decoration:none; color: #66ff00;" >ICAPR 2017</a></b></p>&nbsp;
       <!-- <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=plastic" width=7.5% alt="Build shield"> -->
       <a href="https://doi.org/10.1109/ICAPR.2017.8593100"><img src="https://img.shields.io/badge/-DOI-00629B?style=plastic&logo=ieee" alt="ieee shield"></a>
       <a href="https://arxiv.org/abs/2305.17748"><img src="https://img.shields.io/badge/-Paper-B31B1B?style=plastic&logo=arXiv" alt="arxiv shield"></a>
@@ -25,7 +56,7 @@ This is the official implementation for the paper [Image Hash Minimization for T
 
 :pushpin: [Guidelines to Use](#pencil-guidelines-to-use)
 
-:pushpin: [FAQ](#microscope-faq)
+:pushpin: [FAQ](#mag-faq)
 
 :pushpin: [Citation](#bibtex)
 
@@ -91,7 +122,7 @@ K = 1;                                                                          
 ```
 6. Run `tampered.m` script. The script will print out tampered or not-tampered status for each sample in the dataset and save the Euclidean distance matrix in a file named `distance.mat` where `NaN` represents the images which are not tampered.
 
-## :microscope: FAQ
+## :mag: FAQ
 - The k means clustering inital seed is chosen by k means ++ algorithm. It can also be chosen at random.
 - With different seeds either from k means ++ or random may result in minor deviation from the reported accurcy.
 - We recommend using the k means ++ as it generates more stable seeds than the random strategy.
