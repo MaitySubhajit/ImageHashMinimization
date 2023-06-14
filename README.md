@@ -31,7 +31,7 @@
 	<!-- <br> -->
 	<center><img src="./docs/static/images/banner.jpg" width=60% alt="Banner"></center>
    <br>
-   <img src="https://i0.wp.com/icdar2023.org/wp-content/uploads/2022/08/ICDAR-2023-Logo-white-v10-color.png?fit=1818%2C461&ssl=1" width=10% alt="icdar logo">
+   <!-- <img src="https://www.isical.ac.in/~icapr17/slide_show/images/pcm-logo.png" width=10% alt="icdar logo"> -->
    <center><a href="https://www.isical.ac.in/~icapr17/"><img src="./docs/static/images/icapr.png" width=20% alt="icapr banner"></a></center>
 	<br>
    <center>
