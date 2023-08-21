@@ -37,7 +37,7 @@
    <center>
       <!-- <p class="container"><b><a href="https://www.isical.ac.in/~icapr17/" style="text-decoration:none; color: #66ff00;" >ICAPR 2017</a></b></p>&nbsp; -->
       <!-- <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=plastic" width=7.5% alt="Build shield"> -->
-      <a href="https://doi.org/10.1109/ICAPR.2017.8593100"><img src="https://img.shields.io/badge/-DOI-00629B?style=plastic&logo=ieee" alt="ieee shield"></a>
+      <a href="https://doi.org/10.1109/ICAPR.2017.8593100"><img src="https://img.shields.io/badge/-DOI-FAB70C?style=plastic&logo=doi" alt="doi shield"></a>
       <a href="https://arxiv.org/abs/2305.17748"><img src="https://img.shields.io/badge/-Paper-B31B1B?style=plastic&logo=arXiv" alt="arxiv shield"></a>
       <a href="https://maitysubhajit.github.io/ImageHashMinimization/"><img src="https://img.shields.io/badge/-Page-222222?style=plastic&logo=githubpages" alt="github pages shield"></a>
       <a href="https://github.com/MaitySubhajit/ImageHashMinimization"><img src="https://img.shields.io/badge/-Code-181717?style=plastic&logo=github" alt="github shield"></a>
