@@ -52,7 +52,7 @@
 </div>
 
 # [ICAPR 2017] Image Hash Minimization for Tamper Detection :fire:
-This is the official implementation for the paper [Image Hash Minimization for Tamper Detection](https://ieeexplore.ieee.org/document/8593100) by [S. Maity](https://maitysubhajit.github.io) and [R. K. Karsh](http://ec.nits.ac.in/ram/) published at [ICAPR 2017](https://www.isical.ac.in/~icapr17/).
+This is the official implementation of the paper [Image Hash Minimization for Tamper Detection](https://ieeexplore.ieee.org/document/8593100) by [S. Maity](https://maitysubhajit.github.io) and [R. K. Karsh](http://ec.nits.ac.in/ram/) published at [ICAPR 2017](https://www.isical.ac.in/~icapr17/).
 
 :pushpin: [Requirements](#rocket-requirements)
 
@@ -103,11 +103,11 @@ This is the official implementation for the paper [Image Hash Minimization for T
          ├── ...
 ```
 
-- The images in the 'original' image directory has naming convention as <image_number>.jpg and the images in the 'Tampered' image directory has naming convention as <(image_number)>.jpg for the corresponding original and tampered image pairs. The image numbers should be consecutive without any break.
+- The images in the 'original' image directory have naming convention as <image_number>.jpg and the images in the 'Tampered' image directory have naming convention as <(image_number)>.jpg for the corresponding original and tampered image pairs. The image numbers should be consecutive without any breaks.
 
 ### Running the Scripts
 1. Open the `codes` directory in MATLAB.
-2. Set the path and hyper-parameters in `data_from_original.m` and `data_from_tampered.m`. To imitate our process, ensure `K=1` as we used sinlhle cluster to determine the deviation of the centroid. The hyper-parameter, threshold `thres` for the strength of the SURF features detected in the images needs to be tuned according to the dataset. The proper CASIAv2.0 root pathe should be provided in the `dataset_path` and the `count` should be set as the total number of original and tampered image pairs.
+2. Set the path and hyper-parameters in `data_from_original.m` and `data_from_tampered.m`. To imitate our process, ensure `K=1` as we used single cluster to determine the deviation of the centroid. The hyper-parameter, the threshold `thres` for the strength of the SURF features detected in the images needs to be tuned according to the dataset. The proper CASIAv2.0 root path should be provided in the `dataset_path` and the `count` should be set as the total number of original and tampered image pairs.
 ```
 count = 30;                                               % number of samples <n> in dataset
 K = 1;                                                    % setting the number of clusters to be formed
@@ -115,19 +115,19 @@ thres = 1000;                                             % setting the threshol
 dataset_path = 'path/to/dataset/root/CASIAv2/';           % setting the dataset path
 maxiter_k = 1000000;                                      % setting up the maximum iterations for clustering
 ``` 
-3. Run `data_from_original.m` script and make sure that the centroids are saved as `centers_original.mat` in the `codes` directory. The script will provide visualization of the SURF features extracted from each of the original images.
-4. Run `data_from_tampered.m` script and make sure that the centroids are saved as `centers_tampered.mat` in the `codes` directory. The script will provide visualization of the SURF features extracted from each of the tampered images.
+3. Run the `data_from_original.m` script and make sure that the centroids are saved as `centers_original.mat` in the `codes` directory. The script will provide a visualization of the SURF features extracted from each of the original images.
+4. Run the `data_from_tampered.m` script and make sure that the centroids are saved as `centers_tampered.mat` in the `codes` directory. The script will provide a visualization of the SURF features extracted from each of the tampered images.
 5. Set relevant parameters in `tampered.m`. The `count` should be set as the total number of original and tampered image pairs and `K=1` for imitating the method described in the paper, same as `data_from_original.m` and `data_from_tampered.m`.
 ```
 count = 30;                                               % number of samples <n> in dataset
 K = 1;                                                    % setting the number of clusters to be formed
 ```
-6. Run `tampered.m` script. The script will print out tampered or not-tampered status for each sample in the dataset and save the Euclidean distance matrix in a file named `distance.mat` where `NaN` represents the images which are not tampered.
+6. Run `tampered.m` script. The script will print out tampered or not-tampered status for each sample in the dataset and save the Euclidean distance matrix in a file named `distance.mat` where `NaN` represents the images that are not tampered.
 
 ## :mag: FAQ
-- The k means clustering inital seed is chosen by k means ++ algorithm. It can also be chosen at random.
-- With different seeds either from k means ++ or random may result in minor deviation from the reported accurcy.
-- We recommend using the k means ++ as it generates more stable seeds than the random strategy.
+- The k means clustering initial seed is chosen by the k means++ algorithm. It can also be chosen at random.
+- Different seeds either from the k means++ or random may result in minor deviation from the reported accuracy.
+- We recommend using the k means++ as it generates more stable seeds than the random strategy.
 
 ## BibTeX  
 If you use our code for your research, please cite our paper. Many thanks!
